@@ -23,7 +23,7 @@ td{padding:5px;}
     <button onclick="exportdata()">Create File</button>
 		<pre id="filediv"></pre>
     <br>
-     <input type="file" id="fileimporter" onchange="importdata()">
+     <input type="file" id="fileimporter">
     <br>
 		<br>
     <button>IMPORT</button>
@@ -51,13 +51,12 @@ var blob = new Blob([tabledatas],{type : 'text/plain'});
 link.style.display="block";
 link.href = URL.createObjectURL(blob);
 }
-    function importdata(){
-    var imdata;
-    var freader = new FileReader();
-    freader.onload = function(){
+document.getElementById("fileimporter").addEventListener("change",function(){
+	var freader = new FileReader();
+	freader.onload = function(){
 	    document.getElementById("filediv").textContent = freader.result;}
     freader.readAsText(this.files[0]);
-    }
+    })
     </script>
 	</body>
 </html>
