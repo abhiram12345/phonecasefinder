@@ -21,7 +21,7 @@ td{padding:5px;}
 <a download="phonecasedata.txt" href="#" id="link" style="display:none">Download</a>
     <br>
     <button onclick="exportdata()">Create File</button>
-		<div id="filediv"></div>
+		<pre id="filediv"></pre>
     <br>
      <input type="file" id="fileimporter" onchange="importdata()">
     <br>
@@ -55,9 +55,8 @@ link.href = URL.createObjectURL(blob);
     var imdata;
     var freader = new FileReader();
     freader.onload = function(){
-	    imdata = freader.result;}
+	    document.getElementById("filediv").textContent = freader.result;}
     freader.readAsText(this.files[0]);
-	    document.getElementById("filediv").innerHTML = imdata;
     }
     </script>
 	</body>
