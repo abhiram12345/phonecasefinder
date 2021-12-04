@@ -47,7 +47,7 @@ var tds1 = table1.querySelectorAll("td");
 var tabledata1 = [];
 for (i=0;i<tds1.length;i++){tabledata1.push(tds1[i].innerText);}
 var tabledatas = JSON.stringify(tabledata1);
-var blob = new Blob(tabledatas,{type : 'text/plain'});
+var blob = new Blob([tabledatas],{type : 'text/plain'});
 link.style.display="block";
 link.href = URL.createObjectURL(blob);
 }
