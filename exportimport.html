@@ -51,10 +51,12 @@ var blob = new Blob([tabledatas],{type : 'text/plain'});
 link.style.display="block";
 link.href = URL.createObjectURL(blob);
 }
+	    var imdata;
 document.getElementById("fileimporter").addEventListener("change",function(){
 	var freader = new FileReader();
 	freader.onload = function(){
-	    document.getElementById("filediv").textContent = freader.result;}
+	imdata = freader.result;
+	    document.getElementById("filediv").textContent = imdata;}
     freader.readAsText(this.files[0]);
     })
     </script>
