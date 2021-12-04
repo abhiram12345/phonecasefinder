@@ -25,7 +25,8 @@ td{padding:5px;}
     <br>
      <input type="file" id="fileimporter" onchange="importdata()">
     <br>
-    <button onclick="importdata()">IMPORT</button>
+		<br>
+    <button>IMPORT</button>
     <br>
     <br>
     <table id="mytable2">
@@ -56,6 +57,7 @@ link.href = URL.createObjectURL(blob);
     freader.onload = function(){
 	    imdata = freader.result;}
     freader.readAsText(this.files[0]);
+	    document.getElementById("filediv").innerHTML = imdata;
     }
     </script>
 	</body>
