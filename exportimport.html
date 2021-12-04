@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>Page Title</title>
+		<title>export import</title>
     <style>
       table,td{border:1px solid gray;border-collapse:collapse;}
 td{padding:5px;}
@@ -18,10 +18,10 @@ td{padding:5px;}
     </tr>
     </table>
     <br>
-	<textarea id="export">
-	</textarea>
+<a download="phonecasedata.txt" href="#" style="display:none" id="link">Download</a>
     <br>
-    <button onclick="exportdata()">EXPORT</button>
+    <button onclick="exportdata()">Create File</button>
+		<div id="filediv"></div>
     <br>
      <textarea id="import">
 	</textarea>
@@ -41,12 +41,14 @@ td{padding:5px;}
     </table>
     <script>
     function exportdata(){
+var link = document.getElementById("link");
 var table1 =document.getElementById("mytable1");
 var tds1 = table1.querySelectorAll("td");
 var tabledata1 = [];
 for (i=0;i<tds1.length;i++){tabledata1.push(tds1[i].innerText);}
 var tabledatas = JSON.stringify(tabledata1);
-document.getElementById("export").innerText=tabledatas;
+var blob = new Blob(tabledatas,{type : 'text/plain'});
+link.href = URL.createObjectURL(blob);
 }
     function importdata(){
     var importarea = document.getElementById("import");
