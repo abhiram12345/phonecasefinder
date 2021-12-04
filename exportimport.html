@@ -23,8 +23,7 @@ td{padding:5px;}
     <button onclick="exportdata()">Create File</button>
 		<div id="filediv"></div>
     <br>
-     <textarea id="import">
-	</textarea>
+     <input type="file" id="fileimporter" onchange="importdata()">
     <br>
     <button onclick="importdata()">IMPORT</button>
     <br>
@@ -52,14 +51,12 @@ link.style.display="block";
 link.href = URL.createObjectURL(blob);
 }
     function importdata(){
-    var importarea = document.getElementById("import");
-    if (importarea.value.length !== 0){
-    var importeddata = JSON.parse(importarea.value);
-    var table2 =document.getElementById("mytable2");
-var tds1 = table2.querySelectorAll("td");
-for (m=0;m<tds1.length;m++){tds1[m].innerText=importeddata[m]}
-
-    }}
+    var imdata;
+    var freader = new FileReader();
+    freader.onload = function(){
+	    imdata = freader.result;}
+    freader.readAsText(this.files[0]);
+    }
     </script>
 	</body>
 </html>
