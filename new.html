@@ -214,9 +214,7 @@ function backup(){
 function loadtable(){
     var rest = window.localStorage.getItem("tdv");
     var rest2 = JSON.parse(rest);
-    var numb = rest2.length /= 4;
-    var numb2 = numb - 1;
-	additems(numb);}
+    for (f=0;f<rest2.length;f++){numbadditems(rest2>length);}}
     
 function restore(){
     var table=document.getElementsByTagName("table")[0];
