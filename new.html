@@ -22,7 +22,7 @@ th{background-color:white;color:black;}
     <th>Stock</th>
     </tr>
     <tr>
-    <td>Model</td>
+    <td class="brand">Model</td>
     <td>0</td>
     <td>0</td>
     <td>0</td>
@@ -43,6 +43,7 @@ function additem(){
 var row1 = document.getElementsByTagName("tr")[1];
 var clonedrow = row1.cloneNode(true);
 document.getElementById("mytable").appendChild(clonedrow);
+givfunc();
 }
 function create(){var body = document.getElementsByTagName("body")[0];
 //Linebreak
@@ -226,8 +227,10 @@ function showoptions(){
 var optiontab = document.getElementById("options");
 if(optiontab.style.display === "none"){optiontab.style.display="block"}
 else{optiontab.style.display="none"}}
+function givfunc(){
 var items = document.getElementsByTagName("td");
-for(j=0;j<items.length;j++){items[j].addEventListener("click",edit)};close();restore()
+for(j=0;j<items.length;j++){items[j].addEventListener("click",edit)}};
+window.onload = function(){givfunc();close();restore()}
 
 </script>
 	</body>
