@@ -2,13 +2,20 @@
 <html>
 	<head>
 		<title>Table test</title>
+		<style>
+body{background-color:black;color:white;}
+table{width:100%;}
+table,td{border:1px solid #F6BE00;border-collapse:collapse;}
+th,td{padding:15px;}
+td:hover{color:#f6be00;}
+th{background-color:#F6BE00;color:black;}
+		</style>
 	</head>
 	<body>
 		<div id="test"></div>
     <script>
       var table = document.createElement("table");
       var row = document.createElement("tr");
-      row.style.border = "1px solid black";
       var cell1 = document.createElement("td");
       cell1.innerText = "0";
       var cell2 = document.createElement("td");
