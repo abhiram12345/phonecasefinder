@@ -14,6 +14,7 @@ th{background-color:white;color:black;}
 	<body>
 		<div id="test"></div>
     <script>
+      function createTable(){
       var table = document.createElement("table");
       var row = document.createElement("tr");
       var cell1 = document.createElement("td");
@@ -26,7 +27,8 @@ th{background-color:white;color:black;}
       row.appendChild(cell2);
       row.appendChild(cell3);
       table.appendChild(row);
-      document.getElementById("test").appendChild(table);
+      document.getElementById("test").appendChild(table);}
+      for (i=0;i<100;i++){createTable(i)}
     </script>
 	</body>
 </html>
