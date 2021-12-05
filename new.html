@@ -212,9 +212,13 @@ function backup(){
     window.localStorage.tdv = JSON.stringify(allcellsdata);
     }
 function loadtable(){
+	function clonrow(){
+		var row1 = document.getElementsByTagName("tr")[1];
+var clonedrow = row1.cloneNode(true);
+document.getElementById("mytable").appendChild(clonedrow);}
     var rest = window.localStorage.getItem("tdv");
     var rest2 = JSON.parse(rest);
-    for (f=0;f<rest2.length;f++){additems(rest2.length);}}
+    for (f=0;f<rest2.length;f++){clonrow(rest2.length);}}
     
 function restore(){
     var table=document.getElementsByTagName("table")[0];
