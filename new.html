@@ -226,8 +226,8 @@ function showoptions(){
 var optiontab = document.getElementById("options");
 if(optiontab.style.display === "none"){optiontab.style.display="block"}
 else{optiontab.style.display="none"}}
-window.onload = function (){var items = document.getElementsByTagName("td");
-for(j=0;j<items.length;j++){items[j].addEventListener("click",edit)};close();restore()}
+var items = document.getElementsByTagName("td");
+for(j=0;j<items.length;j++){items[j].addEventListener("click",edit)};close();restore()
 
 </script>
 	</body>
