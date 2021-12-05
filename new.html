@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Page Title</title>
+        <style>
+        body{background-color:white;color:black;width:100%}
+table{width:98%;}
+table,td{border:1px solid gray;border-collapse:collapse;}
+th,td{padding:15px;}
+td:hover{color:red;}
+th{background-color:white;color:black;}
+#additem{margin:30px auto;width:20%;display:block;}
+        </style>
+	</head>
+	<body>
+	<table id= "mytable">
+    <tr>
+    <th>Item</th>
+    <th>Size</th>
+    <th>Shelf</th>
+    <th>Hanger</th>
+    <th>Stock</th>
+    </tr>
+    <tr>
+    <td>Model</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+    </tr>
+    </table>
+    <div>
+    <button id="additem" onclick= "additem()">+</button>
+    </div>
+<script type="text/javascript">
+function additem(){
+var row1 = document.getElementsByTagName("tr")[1];
+var clonedrow = row1.cloneNode(true);
+document.getElementById("mytable").appendChild(clonedrow);
+}
+</script>
+	</body>
+</html>
