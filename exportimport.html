@@ -26,7 +26,7 @@ td{padding:5px;}
      <input type="file" id="fileimporter">
     <br>
 		<br>
-    <button>IMPORT</button>
+    <button onclick="importdata()">IMPORT</button>
     <br>
     <br>
     <table id="mytable2">
@@ -59,6 +59,10 @@ document.getElementById("fileimporter").addEventListener("change",function(){
 	    document.getElementById("filediv").textContent = imdata;}
     freader.readAsText(this.files[0]);
     })
+function importdata(){
+	var imdatas = JSON.parse(imdata);
+	var cells = document.getElementById("mytable2").querySelectorAll("td");
+	for(j=0;j<cells.length;j++){cells[j].innerText=imdatas[j];}
     </script>
 	</body>
 </html>
