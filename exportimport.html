@@ -56,9 +56,9 @@ document.getElementById("fileimporter").addEventListener("change",function(){
 	var freader = new FileReader();
 	freader.onload = function(){
 	imdata = freader.result;
-		var imdatas = JSON.parse(imdata);
+	document.getElementsByTagName("BUTTON")[1].onclick=function(){var imdatas = JSON.parse(imdata);
 	var cells = document.getElementById("mytable2").querySelectorAll("td");
-	for(j=0;j<cells.length;j++){cells[j].innerText=imdatas[j];}
+	for(j=0;j<cells.length;j++){cells[j].innerText=imdatas[j];}}
 	    document.getElementById("filediv").textContent = imdata;}
     freader.readAsText(this.files[0]);
     })
