@@ -211,6 +211,13 @@ function backup(){
     for (i=0;i<allcells.length;i++) {allcellsdata.push(allcells[i].innerText);}
     window.localStorage.tdv = JSON.stringify(allcellsdata);
     }
+function loadtable(){
+    var rest = window.localStorage.getItem("tdv");
+    var rest2 = JSON.parse(rest);
+    var numb = rest2.length /= 4;
+    var numb2 = numb - 1;
+	additems(numb);}
+    
 function restore(){
     var table=document.getElementsByTagName("table")[0];
     var allcells = table.querySelectorAll("td");
