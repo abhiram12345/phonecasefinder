@@ -43,7 +43,7 @@ function additem(){
 var row1 = document.getElementsByTagName("tr")[1];
 var clonedrow = row1.cloneNode(true);
 document.getElementById("mytable").appendChild(clonedrow);
-givfunc();
+clonedrow.addEventListener("click",edit);
 }
 function create(){var body = document.getElementsByTagName("body")[0];
 //Linebreak
@@ -242,7 +242,7 @@ else{optiontab.style.display="none"}}
 function givfunc(){
 var items = document.getElementsByTagName("td");
 for(j=0;j<items.length;j++){items[j].addEventListener("click",edit)}};
-window.onload = function(){givfunc();close();loadtable();restore()}
+window.onload = function(){loadtable();restore();givfunc();close()}
 
 </script>
 	</body>
