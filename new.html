@@ -219,7 +219,7 @@ document.getElementById("mytable").appendChild(clonedrow);}
     var rest = window.localStorage.getItem("tdv2");
     var rest2 = JSON.parse(rest);
     if (rest2 !== null){
-    for (f=0;f<rest2.length;f++){clonrow(rest2.length/=5-=1);}}}
+    for (f=0;f<rest2.length;f++){clonrow(rest2.length/=5-1);}}}
     
 function restore(){
     var table=document.getElementsByTagName("table")[0];
