@@ -45,7 +45,7 @@ var row1 = document.getElementsByTagName("tr")[1];
 var clonedrow = row1.cloneNode(true);
 var clonedcells = clonedrow.querySelectorAll("td");
 clonedcells[0].firstChild.remove();
-clonedcells[0].appendChild(document.createTextNode("Model");
+clonedcells[0].appendChild(document.createTextNode("Model"));
 for(p=1;p<clonedcells.length;p++){clonedcells[p].firstChild.remove();clonedcells[p].appendChild(document.createTextNode("0"))}
 document.getElementById("mytable").appendChild(clonedrow);
 clonedrow.addEventListener("click",edit);
