@@ -43,6 +43,8 @@ th{background-color:white;color:black;}
 function additem(){
 var row1 = document.getElementsByTagName("tr")[1];
 var clonedrow = row1.cloneNode(true);
+var clonedcell = clonedrow.querySelectorAll("td");
+for (z=0;z<clonedcell.length;z++){clonedcell[z].innerText="";}
 document.getElementById("mytable").appendChild(clonedrow);
 clonedrow.addEventListener("click",edit);
 }
