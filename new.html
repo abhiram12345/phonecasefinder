@@ -220,7 +220,7 @@ document.getElementById("mytable").appendChild(clonedrow);}
     var rest2 = JSON.parse(rest);
     var numb = rest2.length/=5;
     var numb2 = numb-=1;
-    if (rest2 !== null){
+    if (rest2 !== null && numb2 >0){
     for (f=0;f<numb2;f++){clonrow(f);}}}
     
 function restore(){
