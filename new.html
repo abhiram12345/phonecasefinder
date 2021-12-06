@@ -218,10 +218,10 @@ var clonedrow = row1.cloneNode(true);
 document.getElementById("mytable").appendChild(clonedrow);}
     var rest = window.localStorage.getItem("tdv2");
     var rest2 = JSON.parse(rest);
-    var numb = rest2.length/=4;
+    var numb = rest2.length/=5;
     var numb2 = numb+=1;
     if (rest2 !== null){
-    for (f=0;f<=numb2;f++){clonrow(f);}}}
+    for (f=0;f<numb2;f++){clonrow(f);}}}
     
 function restore(){
     var table=document.getElementsByTagName("table")[0];
