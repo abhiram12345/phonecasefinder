@@ -44,7 +44,7 @@ function additem(){
 var row1 = document.getElementsByTagName("tr")[1];
 var clonedrow = row1.cloneNode(true);
 var clonedcells = clonedrow.querySelectorAll("td");
-for(p=0;p<clonedcells.length;p++){clonedcells[p].innerText.remove();clonedcells[p].appendChild(document.createTextNode("0"))}
+for(p=0;p<clonedcells.length;p++){clonedcells[p].innerHTML.remove();clonedcells[p].appendChild(document.createTextNode("0"))}
 document.getElementById("mytable").appendChild(clonedrow);
 clonedrow.addEventListener("click",edit);
 }
