@@ -218,7 +218,9 @@ var clonedrow = row1.cloneNode(true);
 document.getElementById("mytable").appendChild(clonedrow);}
     var rest = window.localStorage.getItem("tdv2");
     var rest2 = JSON.parse(rest);
-    for (f=0;f<rest2.length;f++){clonrow(rest2.length);}}
+    if (rest2.length > 0){
+    for (f=0;f<rest2.length;f++){clonrow(rest2.length);}alert("no");}
+else{alert("yes")}}
     
 function restore(){
     var table=document.getElementsByTagName("table")[0];
