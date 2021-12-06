@@ -42,7 +42,7 @@ th{background-color:white;color:black;}
 <script type="text/javascript">
 function additem(){
 var row1 = document.getElementsByTagName("tr")[1];
-var clonedrow = row1.cloneNode(true);
+var clonedrow = row1.cloneNode(false);
 document.getElementById("mytable").appendChild(clonedrow);
 clonedrow.addEventListener("click",edit);
 }
