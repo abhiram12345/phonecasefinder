@@ -49,7 +49,7 @@ clonedcells[1].innerText="0";
 clonedcells[2].innerText="0";
 clonedcells[3].innerText="0";
 document.getElementById("mytable").appendChild(clonedrow);
-clonedcells.forEach = function(){addEventListener("click",edit);}
+clonedcells.forEach(function(){addEventListener("click",edit));}
 }
 function create(){var body = document.getElementsByTagName("body")[0];
 //Linebreak
